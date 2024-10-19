@@ -1,8 +1,8 @@
-'use client'; // Marking as client component
+'use client'; 
 
 import { useEffect, useState } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
-import './page.css'; // Importing the CSS
+import './page.css'; 
 
 import {
   Chart as ChartJS,
@@ -16,7 +16,6 @@ import {
   Legend,
 } from 'chart.js';
 
-// Register the components for Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
