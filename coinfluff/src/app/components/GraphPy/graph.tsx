@@ -12,15 +12,16 @@ interface GraphProps {}
 const Graph: React.FC<GraphProps> = () => {
   const [historicalData, setHistoricalData] = useState<DataPoint[]>([]);
   const [predictedData, setPredictedData] = useState<DataPoint[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true); 
 
-  //to fetch data from the backend
+ 
   useEffect(() => {
+
     const fetchData = async () => {
       try {
         const response = await axios.get('CKX8dF6jSiNp1fYfDZPJGrYynLNsw1B8Q8wT2jmNlatorPFIrBdzHjNBjCdRRtvm'); // Your backend API
         const { realPrices, predictions } = response.data;
-        setHistoricalData(realPrices);
+        setHistoricalData(realPrices);todos
         setPredictedData(predictions);
         setLoading(false);
       } catch (error) {
